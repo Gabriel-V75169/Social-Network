@@ -7,11 +7,11 @@ const userSchema = new Schema({
         required: true,
         trim: true
     },
-    email: {
-        type:String,
+    id: {
+        type: String,
         required: true,
         unique: true,
-        match: [/.+@.+\..+/]
+        trim:true
     },
     thoughts: [
         {

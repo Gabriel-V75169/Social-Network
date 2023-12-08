@@ -2,7 +2,7 @@ const { Schema, Types } = require('mongoose');
 
 const reactionSchema = new Schema(
     {
-      reactionId: {
+      id: {
         type: Schema.Types.ObjectId,
         default: () => new Types.ObjectId(),
       },
@@ -14,11 +14,6 @@ const reactionSchema = new Schema(
       username: {
         type: String,
         required: true,
-      },
-      createdAt: {
-        type: Date,
-        default: Date.now,
-        get: (createdAtVal) => dateFormat(createdAtVal),
       },
     },
     {
