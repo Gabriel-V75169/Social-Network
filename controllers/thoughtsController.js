@@ -29,7 +29,7 @@ module.exports = {
             res.status(500).json(err);
         }
     },
-    async deletethought(req, res) {
+    async deleteThought(req, res) {
         try {
             const thought = await Thoughts.findOneAndDelete({ _id: req.params.id });
 

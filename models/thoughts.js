@@ -2,7 +2,7 @@ const { Schema, model, } = require('mongoose');
 const reaction = require('./reaction');
 
 const thoughtSchema = new Schema({
-    thoughtText: {
+    thought: {
         type: String,
         required: true,
         minLength: 1,
@@ -14,7 +14,7 @@ const thoughtSchema = new Schema({
         unique: true,
         trim:true
     },
-    username: {
+    userName: {
         type: String,
         required: true
     },
